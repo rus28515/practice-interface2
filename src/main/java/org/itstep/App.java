@@ -11,21 +11,18 @@ public class App {
                 System.out.println("Help executed");
             }
         };
-
         Command commandNow = new Command() {
             @Override
             public void execute(String... args) {
                 System.out.println(System.currentTimeMillis());
             }
         };
-
         Command commandExit = new Command() {
             @Override
             public void execute(String... args) {
                 System.out.println("Goodbye!");
             }
         };
-
         Command commandEcho = new Command() {
             @Override
             public void execute(String... args) {
@@ -35,7 +32,6 @@ public class App {
                     }else {
                         System.out.print(args[i]);
                     }
-
                 }
             }
         };
