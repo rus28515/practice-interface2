@@ -35,19 +35,22 @@ public class App {
                 }
             }
         };
+        // тут краще булоб створити масив команд
+        while(true) {
+            Scanner scanner = new Scanner(System.in);
+            String str = scanner.nextLine();
+            String[] arrStr = str.split(" ");
 
-        Scanner scanner = new Scanner(System.in);
-        String str = scanner.nextLine();
-        String[] arrStr = str.split(" ");
-
-        if (arrStr[0].equals("exit")){
-            commandExit.execute(arrStr);
-        } else if (arrStr[0].equals("echo")) {
-            commandEcho.execute(arrStr);
-        } else if (arrStr[0].equals("help")) {
-            commandHelp.execute(arrStr);
-        } else if (arrStr[0].equals("now")) {
-            commandNow.execute(arrStr);
+            // а тут краще було б обходити масив команд в циклі для пошуку потрібної
+            if (arrStr[0].equals("exit")){
+                commandExit.execute(arrStr);
+            } else if (arrStr[0].equals("echo")) {
+                commandEcho.execute(arrStr);
+            } else if (arrStr[0].equals("help")) {
+                commandHelp.execute(arrStr);
+            } else if (arrStr[0].equals("now")) {
+                commandNow.execute(arrStr);
+            }
         }
     }
 }
